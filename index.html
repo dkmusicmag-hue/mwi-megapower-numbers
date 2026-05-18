@@ -414,6 +414,8 @@
         const divEl   = item.querySelector('.stat-divider');
         const lblEl   = item.querySelector('.stat-label');
 
+        if (!numEl) return; // empty spacer — skip
+
         const target  = parseInt(numEl.dataset.target);
         const format  = numEl.dataset.format || '';
         const suffix  = numEl.dataset.suffix  || '';
